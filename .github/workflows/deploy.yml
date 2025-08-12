@@ -1,0 +1,38 @@
+name: Deploy Next.js to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # 当推送到 main 分支时触发
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest # 在 Ubuntu 环境下运行
+
+    steps:
+      - name: Checkout # 检出代码
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js # 设置 Node.js 环境
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' # 使用 Node.js 20 版本
+
+      - name: Setup pnpm # 设置 pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 8
+          run_install: true
+
+      - name: Build Next.js project # 构建 Next.js 项目
+        run: pnpm build
+
+      - name: Add .nojekyll file # 添加 .nojekyll 文件
+        run: touch ./out/.nojekyll
+
+      - name: Deploy to GitHub Pages # 部署到 gh-pages 分支
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }} # GitHub 提供的 token
+          publish_dir: ./out # 指定要发布的目录
+          publish_branch: gh-pages # 指定发布到的分支
