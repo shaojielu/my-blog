@@ -1,42 +1,64 @@
-# Portfolio Blog Starter
+# My Personal Blog
 
-This is a porfolio site template complete with a blog. Includes:
+This is a personal blog project built with Next.js, React, and Tailwind CSS. It's designed to be a simple and clean platform for publishing articles written in Markdown.
 
-- MDX and Markdown support
-- Optimized for SEO (sitemap, robots, JSON-LD schema)
-- RSS Feed
-- Dynamic OG images
-- Syntax highlighting
-- Tailwind v4
-- Vercel Speed Insights / Web Analytics
-- Geist font
+## Features
 
-## Demo
+- **Next.js 15 App Router**: Modern, fast, and server-centric application structure.
+- **MDX/Markdown Support**: Write blog posts using `.md` or `.mdx` files.
+- **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
+- **TypeScript**: For type safety and improved developer experience.
+- **RSS Feed**: Automatically generated RSS feed for your posts.
+- **Sitemap**: `sitemap.ts` for better SEO.
+- **Dynamic OG Images**: `og/route.tsx` for generating social media preview images.
 
-https://portfolio-blog-starter.vercel.app
+## Getting Started
 
-## How to Use
+Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
 
-You can choose from one of the following two methods to use this repository:
+### Prerequisites
 
-### One-Click Deploy
+You need to have [Node.js](https://nodejs.org/) and [pnpm](https://pnpm.io/) installed on your system.
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=vercel-examples):
+### Installation
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/examples/tree/main/solutions/blog&project-name=blog&repository-name=blog)
+1.  Clone the repository:
+    ```sh
+    git clone <your-repository-url>
+    ```
+2.  Navigate to the project directory:
+    ```sh
+    cd my-blog/blog
+    ```
+3.  Install the dependencies:
+    ```sh
+    pnpm install
+    ```
 
-### Clone and Deploy
+### Running the Development Server
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [pnpm](https://pnpm.io/installation) to bootstrap the example:
+To start the development server, run the following command:
 
-```bash
-pnpm create next-app --example https://github.com/vercel/examples/tree/main/solutions/blog blog
-```
-
-Then, run Next.js in development mode:
-
-```bash
+```sh
 pnpm dev
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/templates) ([Documentation](https://nextjs.org/docs/app/building-your-application/deploying)).
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the result. The page will auto-update as you edit the files.
+
+## Available Scripts
+
+In the project directory, you can run:
+
+-   `pnpm dev`: Runs the app in development mode.
+-   `pnpm build`: Builds the app for production to the `.next` folder.
+-   `pnpm start`: Starts a Next.js production server.
+
+## Project Structure
+
+-   `app/`: Contains all the routes, pages, and components for the application.
+-   `app/blog/posts/`: Your blog posts live here as `.md` or `.mdx` files.
+-   `app/components/`: Shared React components used across the application.
+-   `public/`: Static assets like images and fonts.
+-   `package.json`: Lists the project dependencies and scripts.
+-   `tsconfig.json`: TypeScript compiler configuration.
+-   `postcss.config.js`: PostCSS configuration, used by Tailwind CSS.
