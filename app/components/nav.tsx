@@ -10,15 +10,15 @@ const navItems = {
   // '/notes': {
   //   name: 'notes',
   // },
-  '/about': {
-    name: 'About',
-  },
   '/projects': {
     name: 'Projects',
   },
   // 'https://vercel.com/templates/next.js/portfolio-starter-kit': {
   //   name: 'deploy',
   // },
+  '/about': {
+    name: 'About',
+  },
 
 }
 
