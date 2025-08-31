@@ -1,17 +1,10 @@
 function Project(){
     return (
         <div>
-            <h1>
-                voice
-            </h1>
-            <p>
-                朗读助手
-            </p>
 
         </div>
     )
 }
-
 
 export default function Projects(){
     return (
