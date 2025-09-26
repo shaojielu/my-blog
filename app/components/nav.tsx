@@ -10,20 +10,9 @@ const navItems = {
   '/favorites': {
     name: 'Favorites',
   },
-  // '/notes': {
-  //   name: 'notes',
-  // },
   '/projects': {
     name: 'Projects',
   },
-
-  // 'https://vercel.com/templates/next.js/portfolio-starter-kit': {
-  //   name: 'deploy',
-  // },
-  // '/about': {
-  //   name: 'About',
-  // },
-
 }
 
 export function Navbar() {
